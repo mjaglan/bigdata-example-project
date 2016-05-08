@@ -1,4 +1,4 @@
-HW3: OpenStack Exercise
+Working with OpenStack compute Service
 ===============================================================================
 
 Guidelines
@@ -11,13 +11,8 @@ Guidelines
 * Use an individual github repository. A repository in FutureSystems will be
   given later.
 
-Create IU GitHub Account
--------------------------------------------------------------------------------
 
-* Simply login https://github.iu.edu with your IU Username and Password
-  (It is a same IU Credential that you use on other IU sites e.g. one.iu.edu)
-
-OpenStack Command Line Tool ``nova``
+OpenStack Command Line Tool ``nova`` Compute Engine
 -------------------------------------------------------------------------------
 
 OpenStack Kilo is ready to use (as of 02/04/2016) on FutureSystems and you will
@@ -188,8 +183,8 @@ Example view of your submission::
 Useful links
 -------------------------------------------------------------------------------
 
-* Python lesson:
-  http://bdossp-spring2016.readthedocs.org/en/latest/lesson/linux/python.html
+* Source:
+  https://github.com/cglmoocs/BDOSSSpring2016
 
 * OpenStack Beginners:
   http://bdossp-spring2016.readthedocs.org/en/latest/lesson/iaas/openstack.html
