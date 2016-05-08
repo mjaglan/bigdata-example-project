@@ -47,7 +47,7 @@ Preparation
    git checkout -b hw5
 * Pull hw5 template files by::
 
-   git pull git@github.iu.edu:bdossp-sp16/assignments.git hw5
+   git pull bdossp-sp16/assignments hw5 branch
 * Sync to remote by::
 
     git push origin hw5
@@ -101,21 +101,6 @@ should be met in your submission, see the requirements below:
 
 * Run ``hw5.sh`` to record your outputs in ``hw5-cmd.script`` file
 
-Grading Guidelines
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Existence of required files/directories (15%)
-   - inventory 
-   - site.yml
-   - (role) directory including subdirectories
-   - hw5-cmd.script
-* Proper use of Ansible Variables (15%)
-* Proper use of Ansible Tasks (15%)
-* Proper use of Ansible Templates (15%)
-* Proper use of Ansible Handlers (15%)
-* General understanding of Ansible Roles (20%)
-* Successful Execution (5%)
-
 FAQ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -138,54 +123,8 @@ A. Once you installed a mongodb server to a destination, you may need to
    ``template`` module which is useful to locate a file with variables. See
    documentation here: http://docs.ansible.com/ansible/template_module.html
 
-Q. Permission denied on ``git pull git@github.iu.edu:bdossp-sp16/assignments.git hw5``
 
-A. Try https or register your ssh key at IU GitHub. Using https URL is like:
 
-  ::
-    
-    git pull https://github.iu.edu/bdossp-sp16/assignments.git hw5
-
-Submission via IU GitHub (github.iu.edu)
--------------------------------------------------------------------------------
-
-Use IU GitHub to submit assignments on a private repository. :ref:`IU GitHub
-Guidelines <ref-iu-github-for-assignments>`
-
-1. Clone your private repository from the course organization.
-   You IU Username is the name of your repository.
-
-2. Create a ``hw5`` branch 
-
-::
-
-   git branch hw5
-   git checkout hw5
-
-3. Run ``pull`` command to fetch and merge with the template repository::
-
-   git pull git@github.iu.edu:bdossp-sp16/assignments.git hw5
-
-4. Sync with remote::
-
-   git push -u origin hw5
-
-5. Add files and directories to your repository::
-
-   git add inventory
-   git add mongodb
-   git add site.yml
-   git add hw5-cmd.script
-
-6. commit
-
-   ::
-
-     git commit -am "submission hw5"
-
-7. Sync your changes::
-
-   git push -u origin hw5
 
 Challenging Tasks (Optional)
 -------------------------------------------------------------------------------
