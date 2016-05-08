@@ -1,0 +1,13 @@
+3.2.0
+fg491
+True
+ENCRYPTED
+d5:0a:89:e9:97:b3:10:fe:91:4e:29:3c:79:75:11:13
+[u'd5:0a:89:e9:97:b3:10:fe:91:4e:29:3c:79:75:11:13']
+hw3-mjaglan
+ID, Name, Flavor, Image, Created: 3ec1701f-0947-44fc-a65f-e7501b009151, hw3-mjaglan, 2, f51bd217-f809-46a1-9cdb-604d977ad4e9, 2016-02-16T20:39:14Z
+149.165.159.205
+Linux
+/usr/bin/ansible
+/usr/bin/pip
+/usr/bin/virtualenv
