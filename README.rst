@@ -14,8 +14,7 @@ Guidelines
 Use ``hw5`` branch
 -------------------------------------------------------------------------------
 
-* Login https://github.iu.edu with your IU Username and Password
-  (It is a same IU Credential that you use on other IU sites e.g. one.iu.edu)
+* Login to github with your Username and Password
 
 * Checkout hw5 branch
 
