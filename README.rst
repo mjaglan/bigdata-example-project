@@ -1,4 +1,4 @@
-futureSystems india cloud, git & github, python
+futureSystems india cloud, git, python
 ===============================================================================
 
 Guidelines
