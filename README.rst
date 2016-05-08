@@ -1,4 +1,4 @@
-HW2: Get Ready for FutureSystems
+FutureSystems
 ===============================================================================
 
 Guidelines
