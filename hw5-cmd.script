@@ -1,0 +1,115 @@
+Script started on Mon 28 Mar 2016 09:09:12 PM EDT
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [149.165.158.175][0m
+[0;32mok: [149.165.158.225][0m
+[0;32mok: [149.165.159.205][0m
+[0;32mok: [149.165.158.195][0m
+
+TASK [mongodb : Update apt cache] **********************************************
+[0;32mok: [149.165.158.175][0m
+[0;32mok: [149.165.158.225][0m
+[0;32mok: [149.165.158.195][0m
+[0;32mok: [149.165.159.205][0m
+
+TASK [mongodb : Import the public key used by the package management system] ***
+[0;32mok: [149.165.158.225][0m
+[0;32mok: [149.165.159.205][0m
+[0;32mok: [149.165.158.175][0m
+[0;32mok: [149.165.158.195][0m
+
+TASK [mongodb : Add MongoDB repository] ****************************************
+[0;32mok: [149.165.158.175][0m
+[0;32mok: [149.165.158.225][0m
+[0;32mok: [149.165.159.205][0m
+[0;32mok: [149.165.158.195][0m
+
+TASK [mongodb : install mongodb] ***********************************************
+[0;32mok: [149.165.158.225][0m
+[0;32mok: [149.165.158.175][0m
+[0;32mok: [149.165.158.195][0m
+[0;32mok: [149.165.159.205][0m
+
+TASK [mongodb : copy step] *****************************************************
+[0;32mok: [149.165.158.175][0m
+[0;32mok: [149.165.158.225][0m
+[0;32mok: [149.165.158.195][0m
+[0;32mok: [149.165.159.205][0m
+
+TASK [mongodb : force notify] **************************************************
+[0;33mchanged: [149.165.158.225][0m
+[0;33mchanged: [149.165.159.205][0m
+[0;33mchanged: [149.165.158.175][0m
+[0;33mchanged: [149.165.158.195][0m
+
+RUNNING HANDLER [mongodb : restart mongodb] ************************************
+[0;33mchanged: [149.165.158.175][0m
+[0;33mchanged: [149.165.158.225][0m
+[0;33mchanged: [149.165.158.195][0m
+[0;33mchanged: [149.165.159.205][0m
+
+PLAY RECAP *********************************************************************
+[0;33m149.165.158.175[0m            : [0;32mok[0m[0;32m=[0m[0;32m8[0m    [0;33mchanged[0m[0;33m=[0m[0;33m2[0m    unreachable=0    failed=0   
+[0;33m149.165.158.195[0m            : [0;32mok[0m[0;32m=[0m[0;32m8[0m    [0;33mchanged[0m[0;33m=[0m[0;33m2[0m    unreachable=0    failed=0   
+[0;33m149.165.158.225[0m            : [0;32mok[0m[0;32m=[0m[0;32m8[0m    [0;33mchanged[0m[0;33m=[0m[0;33m2[0m    unreachable=0    failed=0   
+[0;33m149.165.159.205[0m            : [0;32mok[0m[0;32m=[0m[0;32m8[0m    [0;33mchanged[0m[0;33m=[0m[0;33m2[0m    unreachable=0    failed=0   
+
+
+Script done on Mon 28 Mar 2016 09:09:35 PM EDT
+Script started on Mon 28 Mar 2016 09:09:51 PM EDT
+[0;32m149.165.158.225 | SUCCESS | rc=0 >>
+● mongodb.service - An object/document-oriented database
+   Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2016-03-29 01:09:35 UTC; 17s ago
+     Docs: man:mongod(1)
+ Main PID: 15946 (mongod)
+   Memory: 31.1M
+      CPU: 120ms
+   CGroup: /system.slice/mongodb.service
+           └─15946 /usr/bin/mongod --config /etc/mongodb.conf
+
+Mar 29 01:09:35 mjaglan-1 systemd[1]: Started An object/document-oriented database.Warning: mongodb.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[0m
+[0;32m149.165.158.175 | SUCCESS | rc=0 >>
+● mongodb.service - An object/document-oriented database
+   Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2016-03-29 01:09:35 UTC; 17s ago
+     Docs: man:mongod(1)
+ Main PID: 15499 (mongod)
+   Memory: 31.0M
+      CPU: 112ms
+   CGroup: /system.slice/mongodb.service
+           └─15499 /usr/bin/mongod --config /etc/mongodb.conf
+
+Mar 29 01:09:35 mjaglan-4 systemd[1]: Started An object/document-oriented database.Warning: mongodb.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[0m
+[0;32m149.165.158.195 | SUCCESS | rc=0 >>
+● mongodb.service - An object/document-oriented database
+   Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2016-03-29 01:09:35 UTC; 17s ago
+     Docs: man:mongod(1)
+ Main PID: 15594 (mongod)
+   Memory: 31.1M
+      CPU: 112ms
+   CGroup: /system.slice/mongodb.service
+           └─15594 /usr/bin/mongod --config /etc/mongodb.conf
+
+Mar 29 01:09:35 mjaglan-3 systemd[1]: Started An object/document-oriented database.Warning: mongodb.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[0m
+[0;32m149.165.159.205 | SUCCESS | rc=0 >>
+● mongodb.service - An object/document-oriented database
+   Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2016-03-29 01:09:35 UTC; 18s ago
+     Docs: man:mongod(1)
+ Main PID: 15749 (mongod)
+   Memory: 31.1M
+      CPU: 167ms
+   CGroup: /system.slice/mongodb.service
+           └─15749 /usr/bin/mongod --config /etc/mongodb.conf
+
+Mar 29 01:09:35 mjaglan-2 systemd[1]: Started An object/document-oriented database.Warning: mongodb.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[0m
+
+Script done on Mon 28 Mar 2016 09:09:53 PM EDT
