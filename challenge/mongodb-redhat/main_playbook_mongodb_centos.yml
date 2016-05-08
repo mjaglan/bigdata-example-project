@@ -1,0 +1,6 @@
+---
+- hosts: webservers1
+  remote_user: centos
+  become: yes
+  roles: 
+    - mongodb

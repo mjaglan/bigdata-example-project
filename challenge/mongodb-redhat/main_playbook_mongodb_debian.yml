@@ -1,0 +1,6 @@
+---
+- hosts: webservers2
+  remote_user: ubuntu
+  become: yes
+  roles: 
+    - mongodb

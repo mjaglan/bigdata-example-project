@@ -1,0 +1,104 @@
+Script started on Mon 18 Apr 2016 07:15:44 PM EDT
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [10.1.3.71][0m
+
+TASK [mongodb : include] *******************************************************
+[0;36mincluded: /N/u/mjaglan/github.iu.edu/mjaglan/challenge/mongodb-redhat/mongodb/tasks/debian.yml for 10.1.3.71[0m
+
+TASK [mongodb : Update apt cache] **********************************************
+[0;32mok: [10.1.3.71][0m
+
+TASK [mongodb : Import the public key used by the package management system] ***
+[0;32mok: [10.1.3.71][0m
+
+TASK [mongodb : Add MongoDB repository] ****************************************
+[0;32mok: [10.1.3.71][0m
+
+TASK [mongodb : install mongodb] ***********************************************
+[0;32mok: [10.1.3.71][0m
+
+TASK [mongodb : copy step] *****************************************************
+[0;32mok: [10.1.3.71][0m
+
+TASK [mongodb : force notify] **************************************************
+[0;33mchanged: [10.1.3.71][0m
+
+TASK [mongodb : include] *******************************************************
+[0;36mskipping: [10.1.3.71][0m
+
+RUNNING HANDLER [mongodb : restart mongodb] ************************************
+[0;33mchanged: [10.1.3.71][0m
+
+PLAY ***************************************************************************
+
+TASK [setup] *******************************************************************
+[0;32mok: [10.1.3.70][0m
+
+TASK [mongodb : include] *******************************************************
+[0;36mskipping: [10.1.3.70][0m
+
+TASK [mongodb : include] *******************************************************
+[0;36mincluded: /N/u/mjaglan/github.iu.edu/mjaglan/challenge/mongodb-redhat/mongodb/tasks/redhat.yml for 10.1.3.70[0m
+
+TASK [mongodb : add 10gen repo file] *******************************************
+[0;32mok: [10.1.3.70][0m
+
+TASK [mongodb : install mongodb] ***********************************************
+[0;32mok: [10.1.3.70][0m
+
+TASK [mongodb : configure mongodb] *********************************************
+[0;32mok: [10.1.3.70][0m
+
+TASK [mongodb : run mongodb] ***************************************************
+[0;33mchanged: [10.1.3.70][0m
+
+
+PLAY RECAP *********************************************************************
+[0;33m10.1.3.70[0m                  : [0;32mok[0m[0;32m=[0m[0;32m9[0m    [0;33mchanged[0m[0;33m=[0m[0;33m2[0m    unreachable=0    failed=0   
+[0;33m10.1.3.71[0m                  : [0;32mok[0m[0;32m=[0m[0;32m9[0m    [0;33mchanged[0m[0;33m=[0m[0;33m2[0m    unreachable=0    failed=0   
+
+
+Script done on Mon 18 Apr 2016 07:16:13 PM EDT
+Script started on Mon 18 Apr 2016 07:16:23 PM EDT
+------------------------------------------------------------------
+
+Script done on Mon 18 Apr 2016 07:16:23 PM EDT
+Script started on Mon 18 Apr 2016 07:16:23 PM EDT
+[0;32m10.1.3.71 | SUCCESS | rc=0 >>
+● mongodb.service - An object/document-oriented database
+   Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2016-04-18 23:16:05 UTC; 20s ago
+     Docs: man:mongod(1)
+ Main PID: 9436 (mongod)
+   Memory: 31.4M
+      CPU: 174ms
+   CGroup: /system.slice/mongodb.service
+           └─9436 /usr/bin/mongod --config /etc/mongodb.conf
+
+Apr 18 23:16:05 admin-debian-mjaglan systemd[1]: Started An object/document-oriented database.Warning: mongodb.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[0m
+
+Script done on Mon 18 Apr 2016 07:16:25 PM EDT
+Script started on Mon 18 Apr 2016 07:16:25 PM EDT
+------------------------------------------------------------------
+
+Script done on Mon 18 Apr 2016 07:16:25 PM EDT
+Script started on Mon 18 Apr 2016 07:16:26 PM EDT
+[0;32m10.1.3.70 | SUCCESS | rc=0 >>
+● mongodb.service - An object/document-oriented database
+   Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2016-04-18 23:16:05 UTC; 22s ago
+     Docs: man:mongod(1)
+ Main PID: 8371 (mongod)
+   Memory: 28.9M
+      CPU: 177ms
+   CGroup: /system.slice/mongodb.service
+           └─8371 /usr/bin/mongod --config /etc/mongodb.conf
+
+Apr 18 23:16:05 admin-redhat-mjaglan systemd[1]: Started An object/document-oriented database.Warning: mongodb.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[0m
+
+Script done on Mon 18 Apr 2016 07:16:27 PM EDT

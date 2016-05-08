@@ -1,0 +1,8 @@
+---
+- include: main_playbook_mongodb_debian.yml
+  when: ansible_os_family == 'Debian'
+  tags: package
+
+- include: main_playbook_mongodb_centos.yml
+  when: ansible_os_family == 'RedHat'
+  tags: package

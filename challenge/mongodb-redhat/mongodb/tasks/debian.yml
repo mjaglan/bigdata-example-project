@@ -1,0 +1,17 @@
+---
+# tasks file for nginx
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=86400
+- name: Import the public key used by the package management system
+  apt_key: keyserver="{{mongodb_keyserver}}" id="{{mongodb_gpgkey_id}}" state=present
+- name: Add MongoDB repository
+  apt_repository: repo="{{mongodb_repository_list}}" state=present
+- name: install mongodb
+  apt: pkg="{{mongodb_pkg_name}}" state=latest update_cache=yes
+- name: copy step
+  template: src=main.yml dest=/lib/systemd/system/mongodb.service owner=root group=root mode=0644
+- name: force notify
+  shell: echo hello
+  notify:
+  - restart mongodb
+#  - reload mongodb
