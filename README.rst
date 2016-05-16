@@ -26,7 +26,15 @@ which will install necessary softwares on the VM, retrieve the dataset and uploa
   
 to the master node.
 
-To know how to run this project, refer the `installation.rst file <installation.rst>`_. A sample video demo of this project is present on `YouTube Channel <https://youtu.be/PxM0yurCBPQ>`_.
+To know how to run this project, refer the `installation.rst file <installation.rst>`_. To see a sample video demo of this project, click at -
+
+|youtube1|_
+
+.. |youtube1| image:: /docs/images/youtube.logo.png
+.. _youtube1: https://youtu.be/PxM0yurCBPQ
+
+
+
 
 
 
