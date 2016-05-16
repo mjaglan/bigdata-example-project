@@ -1,0 +1,55 @@
+--- 
+- 
+  hosts: all
+  name: debug
+  tags: debug
+  tasks: 
+    - 
+      apt: 
+        name: "{{ item }}"
+        state: present
+      become: true
+      name: "install tools"
+      with_items: 
+        - nmap
+- 
+  become: true
+  become_user: hadoop
+  hosts: frontendnodes
+  name: "Deploy the dataset"
+  tags: data
+  tasks: 
+    - 
+      file: 
+        path: "{{ item }}"
+        state: directory
+      name: "prepare the data directory"
+      with_items: 
+        - "{{ download_dir }}"
+        - "{{ db_dir }}"
+        - "{{ dest_Dir }}"
+    - 
+      get_url: 
+        dest: "{{ db_dir }}"
+        timeout: 600
+        url: "{{ databases.4.url }}"
+      name: download
+    - 
+      args: 
+        creates: "{{ db_dir }}/.imported-to-hdfs"
+      name: "make hdfs directory"
+      shell: "bash -lc \"hadoop fs -mkdir {{ db_dir }}\""
+    - 
+      args: 
+        creates: "{{ db_dir }}/.imported-to-hdfs"
+      name: "import databases into hdfs"
+      shell: "bash -lc \"hadoop fs -put {{ db_dir }}/* {{ db_dir }} && touch {{ db_dir }}/.imported-to-hdfs\""
+  vars: 
+    databases: 
+      4: 
+        url: "https://iu.box.com/shared/static/oc0cowbdf072jwyba4m4rv2kkv85spsj.txt"
+    db4_path: "{{ db_dir }}/{{ databases.4.url | splitext | first }}"
+    db_dir: "/tmp/{{ pkg_name }}"
+    dest_Dir: "/home/hadoop/{{ pkg_name }}"
+    download_dir: /tmp
+    pkg_name: twitter

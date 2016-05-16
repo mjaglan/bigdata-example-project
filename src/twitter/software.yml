@@ -1,0 +1,46 @@
+--- 
+- 
+  hosts: all
+  name: debug
+  tags: debug
+  tasks: 
+    - 
+      apt: 
+        name: "{{ item }}"
+        state: present
+      become: true
+      name: "install tools"
+      with_items: 
+        - nmap
+- 
+  hosts: hadoopnodes
+  name: "Install the Software"
+  tags: software
+  tasks: 
+    - 
+      apt_key: 
+        id: 642AC823
+        keyserver: keyserver.ubuntu.com
+        state: present
+      become: true
+      name: "add repository keys"
+    - 
+      apt_repository: 
+        repo: "deb https://dl.bintray.com/sbt/debian /"
+        state: present
+        update_cache: true
+      become: true
+      name: "add repositories"
+    - 
+      apt: 
+        name: "{{ item }}"
+        state: present
+      become: true
+      name: "install dependencies"
+      with_items: 
+        - build-essential
+        - cmake
+        - unzip
+        - sbt
+        - scala
+        - dos2unix

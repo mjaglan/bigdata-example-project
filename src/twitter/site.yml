@@ -1,0 +1,9 @@
+--- 
+- 
+  include: software.yml
+- 
+  include: dataset.yml
+- 
+  include: analysis.yml
+#- 
+#  include: download.yml

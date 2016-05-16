@@ -1,0 +1,33 @@
+--- 
+- 
+  become: true
+  become_user: hadoop
+  hosts: frontendnodes
+  name: "Run the  analysis code"
+  tags: analysis
+  tasks: 
+    - 
+      become: true
+      copy: 
+        dest: "/home/hadoop/{{ pkg_name }}/{{ item | basename }}"
+        owner: hadoop
+        src: "{{ item }}"
+      name: "copy the analysis scripts"
+      with_items: 
+        - ./twitter.sbt
+        - ./kmeans.demo.scala
+        - ./main.sh
+    - 
+      args: 
+        chdir: "/home/hadoop/{{ pkg_name }}/"
+      become: true
+      name: "build scala source"
+      shell: "dos2unix main.sh"
+#    - 
+#      args: 
+#        chdir: "/home/hadoop/{{ pkg_name }}/"
+#      become: true
+#      name: "build scala source"
+#      shell: "bash -l ./main.sh"
+  vars: 
+    pkg_name: twitter
