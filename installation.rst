@@ -5,13 +5,13 @@ How To Run
 It is assumed following steps are already done - 
 
 * cloud environment is setup.
-* git clone --recursive https://github.com/futuresystems/big-data-stack.git in home directory
+* ``git clone --recursive https://github.com/futuresystems/big-data-stack.git`` in home directory
 * load openstack module
 * enable some cloud enviroment - india-futuresystems, or chameleon, or something else
 * enable some virtual ennvironment
 * install all the requirements from "big-data-stack"
 * git clone this repository in the same home directory
-* cd into /src
+* cd into `/src </src>`_
 
 
 ``installation:``
@@ -28,4 +28,4 @@ It is assumed following steps are already done -
 
 * The analysis will end up showing the Sum Squared Error value related message.
 
-Feel free to refer `video demo <https://youtu.be/yfD48ibTle0>`_ :)
+Feel free to refer `video demo <https://youtu.be/PxM0yurCBPQ>`_ :)
