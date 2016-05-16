@@ -11,7 +11,7 @@ The KMeans algorithm, when ran for 30 iterations on 13,700+ records for 8 cluste
 
 
 ``Implementation:``
-The entry point to run this project is executing ``launch.sh`` present at `/src <../src>`_. The `/src/twitter/ <../src/twitter/>`_ contains the main source code::
+The entry point to run this project is executing ``launch.sh`` present at `/src </src>`_. The `/src/twitter/ </src/twitter/>`_ contains the main source code::
 
   site.yml
   |--software.yml  // install necessary softwares on the VM
