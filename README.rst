@@ -5,6 +5,11 @@ Using KMeans clustering with Euclidean distance measure to group together simila
 
 Objective is to run analysis algorithm on openstack cloud, by ansiblizing the major steps. For this we have to use ansible scripts to create the VMs, setup hadoop cluster, install required softwares, retrieve and upload the dataset into HDFS, and copy analysis code to Master-node of Hadoop Cluster. Login to master node, run the analysis code on the data in HDFS, retrieve the results, and show the output of algorithm ran.
 
+|youtube1|_
+
+.. |youtube1| image:: /docs/images/preview.Imgur.gif
+.. _youtube1: https://youtu.be/PxM0yurCBPQ
+
 
 ``Results:``
 The KMeans algorithm, when ran for 30 iterations on 13,700+ records for 8 clusters, the resulting sum squared error (SSE) was coming around 6300 ± 500. We ran our source multiple times from scratch.
@@ -28,10 +33,10 @@ to the master node.
 
 To know how to run this project, refer the `installation.rst file <installation.rst>`_. To see a sample video demo of this project, click at -
 
-|youtube1|_
+|youtube2|_
 
-.. |youtube1| image:: /docs/images/youtube.logo.png
-.. _youtube1: https://youtu.be/PxM0yurCBPQ
+.. |youtube2| image:: /docs/images/youtube.logo.png
+.. _youtube2: https://youtu.be/PxM0yurCBPQ
 
 
 
